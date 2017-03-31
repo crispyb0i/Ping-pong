@@ -26,12 +26,11 @@ _{
   For every number that is divisible by 3 and 5, it will return "ping-pong" in place of that number
   -example input: 15
   -example output: ...,13,14,"ping-pong"
-
 }_
 
 ## Setup/Installation Requirements
 
-* _Clone the ping-pong repository
+* _Clone the ping-pong repository_
 * _Open the index.html file_
 * _Enjoy!_
 
