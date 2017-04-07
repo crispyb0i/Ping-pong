@@ -1,11 +1,5 @@
-$(document).ready(function(){
-  $("#form1").submit(function(event) {
-    event.preventDefault();
-    $("#results").empty();
-    $("#backPic").hide();
-
-    var input = $("#number").val();
-
+//business-logic for normal PingPong
+function pingPong(input){
     if(input!=''){
       $("#frontPic").show();
     }
@@ -23,14 +17,22 @@ $(document).ready(function(){
         $('#results').append('<li>' + i + '</li>')
       }
     }
-  });
-  $("#form2").submit(function(event) {
+  };
+
+//user-logic for normal PingPong
+$(document).ready(function(){
+   
+  $("#form1").submit(function(event) {
     event.preventDefault();
     $("#results").empty();
-    $("#frontPic").hide();
+    $("#backPic").hide();
 
     var input = $("#number").val();
-
+    pingPong(input);
+    
+ //business-logic for reverse PingPong
+    
+ function reversePingPong(input){
     if(input!=""){
       $("#backPic").show();
     }
@@ -48,5 +50,16 @@ $(document).ready(function(){
         $('#results').prepend('<li>' + i + '</li>')
       }
     }
+ }
+    //user-logic for reverse PingPong
+  $("#form2").submit(function(event) {
+    event.preventDefault();
+    $("#results").empty();
+    $("#frontPic").hide();
+
+    var input = $("#number").val();
+    reversePingPong(input);
+
   });
+});
 });
